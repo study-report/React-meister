@@ -16,11 +16,14 @@ export default function TextInput({ setChatList }: TextInputProps) {
       ...chatList,
       { isMe: true, content: inputText, id: chatList.length },
     ]);
-    setChatList((chatList) => [
-      ...chatList,
-      { isMe: false, content: "어쩌라고요", id: chatList.length },
-    ]);
     setInputText("");
+
+    setTimeout(() => {
+      setChatList((chatList) => [
+        ...chatList,
+        { isMe: false, content: "어쩌라고요", id: chatList.length },
+      ]);
+    }, 500);
   };
 
   return (

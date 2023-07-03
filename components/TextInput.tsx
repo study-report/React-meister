@@ -12,7 +12,7 @@ export default function TextInput({ handleChat }: TextInputProps) {
 
   return (
     <div className="w-full sticky bottom-0 pt-2 bg-[#343541] border-t border-white/20">
-      <div className="mx-2 relative flex h-full flex-1 items-stretch md:flex-col flex-col">
+      <div className="mx-2 relative flex items-stretch md:flex-col flex-col">
         <input
           type="text"
           value={inputText}

@@ -12,7 +12,7 @@ interface ChatProps {
 
 export default function Chat({ chatList, chatListEndRef }: ChatProps) {
   return (
-    <div>
+    <div className="h-full">
       {chatList.map((chat) => (
         <ChatItem chat={chat} key={chat.id} />
       ))}

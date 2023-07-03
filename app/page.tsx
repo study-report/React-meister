@@ -23,11 +23,9 @@ export default function Home() {
   }, [chatList.length]);
 
   const handleChat = (message: string) => {
-    socket.emit("chat", { message, id: chatList.length, isMine: true });
-    setChatList((prev) => [
-      ...prev,
-      { message, id: chatList.length, isMine: true },
-    ]);
+    const messageObject = { message, id: chatList.length, isMine: true };
+    socket.emit("chat", messageObject);
+    setChatList((prev) => [...prev, messageObject]);
     // gpt api 가져와서 message의 내용을 답변 해주기
   };
 

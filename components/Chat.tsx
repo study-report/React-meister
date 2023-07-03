@@ -1,9 +1,8 @@
 import { Chat, chatGPTProfileImageSrc, userProfileImageSrc } from "@/fixture";
 import Image from "next/image";
 import classnames from "classnames";
-import EditIcon from "@/Icons/EditIcon";
-import EvaluationIcon from "@/Icons/EvaluationIcon";
 import { RefObject } from "react";
+import { EditIcon, EvaluationIcon } from "@/Icons";
 
 interface ChatProps {
   chatList: Chat[];

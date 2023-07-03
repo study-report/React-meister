@@ -1,6 +1,6 @@
 "use client";
 
-import SendIcon from "@/Icons/SendIcon";
+import { SendIcon } from "@/Icons";
 import { useState } from "react";
 
 interface TextInputProps {

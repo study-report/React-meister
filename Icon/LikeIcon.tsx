@@ -1,19 +1,18 @@
-export default function PlusIcon({ ...props }) {
+export default function LikeIcon() {
   return (
     <svg
       stroke="currentColor"
       fill="none"
-      strokeWidth="1.5"
+      strokeWidth="2"
       viewBox="0 0 24 24"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="h-4 w-4"
       height="1em"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
-      <line x1="12" y1="5" x2="12" y2="19"></line>
-      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
     </svg>
   );
 }

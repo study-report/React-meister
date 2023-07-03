@@ -4,7 +4,7 @@ export default function SendIcon({ ...props }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       fill="none"
-      stroke-width="2"
+      strokeWidth="2"
       {...props}
     >
       <path

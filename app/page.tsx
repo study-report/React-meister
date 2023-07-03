@@ -22,10 +22,6 @@ export default function Home() {
     });
   }, [chatList.length]);
 
-  useEffect(() => {
-    console.log(chatList);
-  }, [chatList]);
-
   const handleChat = (message: string) => {
     socket.emit("chat", { message, id: chatList.length, isMine: true });
     setChatList((prev) => [

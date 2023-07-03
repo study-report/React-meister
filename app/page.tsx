@@ -20,7 +20,7 @@ export default function Home() {
         { ...message, id: chatList.length, isMine: false },
       ]);
     });
-  }, []);
+  }, [chatList.length]);
 
   useEffect(() => {
     console.log(chatList);

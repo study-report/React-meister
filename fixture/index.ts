@@ -5,20 +5,20 @@ export const chatGPTProfileImageSrc =
 
 export interface Chat {
   id: number;
-  isMe: boolean;
-  content: string;
+  isMine: boolean;
+  message: string;
 }
 
 export const chatListFixture: Chat[] = [
   {
     id: 1,
-    isMe: true,
-    content: "여자친구 만드는 법",
+    isMine: true,
+    message: "여자친구 만드는 법",
   },
   {
     id: 2,
-    isMe: false,
-    content: `여자친구를 만들기 위해서는 다음과 같은 접근 방법을 고려할 수 있습니다:
+    isMine: false,
+    message: `여자친구를 만들기 위해서는 다음과 같은 접근 방법을 고려할 수 있습니다:
 
     자기 자신을 발전시키세요: 자신을 사랑하고 존중하는 사람으로 성장하는 것이 중요합니다. 자신의 관심사나 취미를 개발하고, 자신감을 키우는 노력을 해보세요. 이를 통해 더욱 매력적인 사람으로 변화할 수 있습니다.
     
@@ -36,13 +36,13 @@ export const chatListFixture: Chat[] = [
   },
   {
     id: 3,
-    isMe: true,
-    content: "우하하",
+    isMine: true,
+    message: "우하하",
   },
   {
     id: 4,
-    isMe: false,
-    content:
+    isMine: false,
+    message:
       "웃음을 지으셨군요! 행복한 기분이 느껴지네요. 여자친구를 만들기 위해서는 긍정적인 에너지와 유머 감각을 가지는 것도 좋은 방법입니다. 웃음과 긍정적인 에너지는 다른 사람들과의 관계 형성에 도움이 될 수 있습니다. 자신의 개성과 유머 감각을 살려서 사람들과 함께 즐거운 시간을 보낼 수 있으면 여러 가지 기회를 만날 수 있을 겁니다. 웃음과 긍정은 매력을 높여주는 중요한 요소 중 하나이니까요!",
   },
 ];

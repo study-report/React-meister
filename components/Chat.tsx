@@ -1,20 +1,22 @@
-import {
-  Chat,
-  chatGPTProfileImageSrc,
-  chatList,
-  userProfileImageSrc,
-} from "@/fixture";
+import { Chat, chatGPTProfileImageSrc, userProfileImageSrc } from "@/fixture";
 import Image from "next/image";
 import classnames from "classnames";
 import EditIcon from "@/Icons/EditIcon";
 import EvaluationIcon from "@/Icons/EvaluationIcon";
+import { RefObject } from "react";
 
-export default function Chat() {
+interface ChatProps {
+  chatList: Chat[];
+  chatListEndRef: RefObject<HTMLDivElement>;
+}
+
+export default function Chat({ chatList, chatListEndRef }: ChatProps) {
   return (
-    <div className="">
+    <div>
       {chatList.map((chat) => (
         <ChatItem chat={chat} />
       ))}
+      <div ref={chatListEndRef} />
     </div>
   );
 }

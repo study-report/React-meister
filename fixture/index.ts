@@ -9,7 +9,7 @@ export interface Chat {
   content: string;
 }
 
-export const chatList: Chat[] = [
+export const chatListFixture: Chat[] = [
   {
     id: 1,
     isMe: true,

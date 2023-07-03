@@ -1,23 +1,34 @@
 "use client";
 
 import SendIcon from "@/Icons/SendIcon";
-import { chatList } from "@/fixture";
-import { useState } from "react";
+import { Chat } from "@/fixture";
+import { Dispatch, RefObject, SetStateAction, useState } from "react";
 
-export default function TextInput() {
+interface TextInputProps {
+  setChatList: Dispatch<SetStateAction<Chat[]>>;
+}
+
+export default function TextInput({ setChatList }: TextInputProps) {
   const [inputText, setInputText] = useState("");
+
   const handleSend = () => {
-    chatList.push({
-      content: inputText,
-      isMe: true,
-      id: chatList[chatList.length - 1].id + 1,
-    });
+    setChatList((chatList) => [
+      ...chatList,
+      { isMe: true, content: inputText, id: chatList.length },
+    ]);
+    setChatList((chatList) => [
+      ...chatList,
+      { isMe: false, content: "어쩌라고요", id: chatList.length },
+    ]);
+    setInputText("");
   };
+
   return (
     <div className="w-full sticky bottom-0 pt-2 bg-[#343541] border-t border-white/20">
       <div className="mx-2 relative flex h-full flex-1 items-stretch md:flex-col flex-col">
         <input
           type="text"
+          value={inputText}
           className="bg-[#40414F] rounded-xl pl-3 pr-10 py-2.5 focus:outline-none"
           onChange={(e) => setInputText(e.target.value)}
         />

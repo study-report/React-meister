@@ -6,8 +6,8 @@ import {
 } from "@/fixture";
 import Image from "next/image";
 import classnames from "classnames";
-import EditIcon from "@/Icon/EditIcon";
-import EvaluationIcon from "@/Icon/EvaluationIcon";
+import EditIcon from "@/Icons/EditIcon";
+import EvaluationIcon from "@/Icons/EvaluationIcon";
 
 export default function Chat() {
   return (

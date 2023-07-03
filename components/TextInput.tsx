@@ -1,4 +1,4 @@
-import SendIcon from "@/Icon/SendIcon";
+import SendIcon from "@/Icons/SendIcon";
 
 export default function TextInput() {
   return (
@@ -11,7 +11,8 @@ export default function TextInput() {
         <SendIcon className="h-4 w-4 m-1 absolute top-[11px] right-3" />
       </div>
       <p className="px-3 pb-3 pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-4 md:pb-6 md:pt-3">
-        Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. ChatGPT May 24 Version
+        Free Research Preview. ChatGPT may produce inaccurate information about
+        people, places, or facts. ChatGPT May 24 Version
       </p>
     </div>
   );

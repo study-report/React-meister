@@ -19,4 +19,14 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #343541;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: normal;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: normal;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-variation-settings: normal;
+  line-height: 1.5;
+  tab-size: 4;
 }

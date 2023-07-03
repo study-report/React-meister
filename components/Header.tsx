@@ -1,4 +1,4 @@
-import { HamburgerIcon, PlusIcon } from "@/Icon";
+import { HamburgerIcon, PlusIcon } from "@/Icons";
 
 export default function Header() {
   return (

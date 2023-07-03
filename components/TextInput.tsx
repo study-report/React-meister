@@ -2,7 +2,7 @@ import SendIcon from "@/Icons/SendIcon";
 
 export default function TextInput() {
   return (
-    <div className="w-full fixed bottom-0 pt-2 bg-[#343541] border-t border-white/20">
+    <div className="w-full sticky bottom-0 pt-2 bg-[#343541] border-t border-white/20">
       <div className="mx-2 relative flex h-full flex-1 items-stretch md:flex-col flex-col">
         <input
           type="text"

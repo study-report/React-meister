@@ -13,24 +13,29 @@ export default function Home() {
   const [chatList, setChatList] = useState<Chat[]>([]);
   const chatListEndRef = useRef<HTMLDivElement>(null);
 
+  const handleChat = (message: string) => {
+    socket.emit("chat", { message, id: chatList.length, isMine: true });
+    setChatList((prev) => [
+      ...prev,
+      { message, id: chatList.length, isMine: true },
+    ]);
+    // gpt api 가져와서 message의 내용을 답변 해주기
+  };
+
   useEffect(() => {
     socket.on("chat", (message) => {
+      console.log(message);
       setChatList((prev) => [
         ...prev,
         { ...message, id: chatList.length, isMine: false },
       ]);
     });
-  }, [chatList.length]);
-
-  const handleChat = (message: string) => {
-    const messageObject = { message, id: chatList.length, isMine: true };
-    socket.emit("chat", messageObject);
-    setChatList((prev) => [...prev, messageObject]);
-    // gpt api 가져와서 message의 내용을 답변 해주기
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     chatListEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    console.log(chatList);
   }, [chatList]);
 
   return (

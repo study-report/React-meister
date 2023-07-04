@@ -30,7 +30,7 @@ export default function Home() {
         { ...message, id: chatList.length, isMine: false },
       ]);
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
